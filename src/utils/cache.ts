@@ -3,7 +3,7 @@ import { Asset } from 'expo-asset';
 import { Image } from 'react-native'
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 
-function cacheImages(images: any) {
+export function cacheImages(images: any) {
   return images.map((image: string | number) => {
     if (typeof image === 'string') {
       return Image.prefetch(image);

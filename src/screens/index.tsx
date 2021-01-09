@@ -3,6 +3,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import AppLoading from 'expo-app-loading';
 import usePreload from '../hooks/usePreload';
+import PokemonsProvider from '../context/Pokemon';
 import RootStack from '../navigation/RootStack';
 
 function Scafold() {
@@ -15,7 +16,9 @@ function Scafold() {
 	return (
 		<SafeAreaProvider>
 			<NavigationContainer>
-				<RootStack />
+				<PokemonsProvider>
+					<RootStack />
+				</PokemonsProvider>
 			</NavigationContainer>
 		</SafeAreaProvider>
 	);

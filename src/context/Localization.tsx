@@ -13,7 +13,6 @@ interface Context {
 	setLocale: React.Dispatch<React.SetStateAction<locales>>;
 }
 
-// TODO(): added translations to these files.
 i18n.translations = {
 	en,
 	fr,

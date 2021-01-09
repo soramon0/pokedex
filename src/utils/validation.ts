@@ -13,12 +13,12 @@ yup.setLocale({
 	}
 })
 
-const emailSchema = yup.object().shape({
-	email: yup.string().email().required(),
+const searchSchema = yup.object().shape({
+	search: yup.string(),
 })
 
-export function validateEmail(values: any, t: any) {
-	return validate(emailSchema, values, t)
+export function validateSearch(values: any, t: any) {
+	return validate(searchSchema, values, t)
 }
 
 async function validate(schema: SchemaLike, values: any, t: any, options?: ValidateOptions) {
