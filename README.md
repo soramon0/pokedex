@@ -1,1 +1,1 @@
-# Pokémon National Dex.
+# Pokémon National Dex

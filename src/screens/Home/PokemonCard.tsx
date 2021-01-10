@@ -16,7 +16,7 @@ function PokemonCard({ pokemon }: Props) {
 
 	useEffect(() => {
 		(async () => await cacheImages([image]))();
-	}, []);
+	}, [image]);
 
 	return (
 		<Box mt='base' px='xs' flex={1}>
@@ -51,7 +51,7 @@ function PokemonCard({ pokemon }: Props) {
 					justifyContent='space-between'
 					alignItems='center'
 				>
-					<Box flex={1}>
+					<Box flex={1} mt='sm'>
 						{pokemon.types.map(({ type }) => (
 							<Box
 								key={type.name}

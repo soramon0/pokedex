@@ -39,7 +39,7 @@ const PokemonsProvider: React.FC = ({ children }) => {
 
 				try {
 					const { data: listRes } = await http.get<PokemonListResponse>(
-						`/pokemon?limit=10`
+						`/pokemon?limit=20`
 					);
 					const requests = listRes.results.map(({ name }) =>
 						http.get<IPokemon>(`/pokemon/${name}`)

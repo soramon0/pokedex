@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Animated, Keyboard, TouchableWithoutFeedback } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import { useLocalization } from '../../context/Localization';
 import { HomeScreenProps } from '../../types/navigation.d';
 import { validateSearch } from '../../utils/validation';
@@ -44,6 +45,7 @@ const HomeScreen: React.VFC<HomeScreenProps> = () => {
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss}>
 			<Box flex={1} px='md' py='lg'>
+				<StatusBar hidden />
 				<Text fontWeight='700' fontSize={32} lineHeight={32}>
 					{t('home.pokedex')}
 				</Text>
